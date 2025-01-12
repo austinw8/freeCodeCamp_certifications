@@ -4,7 +4,7 @@ let gold = 50;
 let currentWeapon = 0;
 let fighting;
 let monsterHealth;
-let inventory = ["stick"];
+let inventory = ["Paper Clip"];
 
 const button1 = document.querySelector('#button1');
 const button2 = document.querySelector("#button2");
@@ -19,13 +19,13 @@ const monsterHealthText = document.querySelector("#monsterHealth");
 const imgElement = document.querySelector("#monsterImage");
 
 const weapons = [
-    { name: 'paper clip', power: 5 },
-    { name: 'stick', power: 10 },
-    { name: 'dagger', power: 30 },
-    { name: 'claw hammer', power: 50 },
-    { name: 'cross bow', power: 75 },
-    { name: 'sword', power: 100 },
-    { name: 'lightsaber', power: 200 }
+    { name: 'Paper Clip', power: 5 },
+    { name: 'Stick', power: 10 },
+    { name: 'Dagger', power: 30 },
+    { name: 'Cross Bow', power: 50 },
+    { name: 'Sword', power: 75 },
+    { name: 'Battle Axe', power: 100 },
+    { name: 'Lightsaber', power: 200 }
   ];
 
 const monsters = [
@@ -35,84 +35,84 @@ const monsters = [
       health: 15,
       img: "https://i.ibb.co/kHMB3pC/Slime.jpg"
     },
-    // {
-    //   name: "Giant Bat",
-    //   level: 3,
-    //   health: 25,
-    //   img: "https://i.ibb.co/W2B173s/Giant-Bat.jpg"
-    // },
-    // {
-    //   name: "Worm",
-    //   level: 4,
-    //   health: 30,
-    //   img: "https://i.ibb.co/ZhVw7B8/Worm.jpg"
-    // },
-    // {
-    //   name: "Mutant Rooster",
-    //   level: 5,
-    //   health: 35,
-    //   img: "https://i.ibb.co/30BDNGs/Mutant-Rooster.jpg"
-    // },
-    // {
-    //   name: "Rabbit of Caerbannog",
-    //   level: 6,
-    //   health: 40,
-    //   img: "https://i.ibb.co/DbkpkJ2/13.jpg"
-    // },
-    // {
-    //   name: "Cave Spider",
-    //   level: 7,
-    //   health: 50,
-    //   img: "https://i.ibb.co/yg7VNwP/Cave-Spider.jpg"
-    // },
-    // {
-    //   name: "Cave Stalker",
-    //   level: 8,
-    //   health: 60,
-    //   img: "https://i.ibb.co/YWVMmgD/Cave-Stalker.jpg"
-    // },
-    // {
-    //   name: "Stone Golem",
-    //   level: 9,
-    //   health: 70,
-    //   img: "https://i.ibb.co/CHrYyfy/Stone-Golem.jpg"
-    // },
-    // {
-    //   name: "Cave Troll",
-    //   level: 10,
-    //   health: 80,
-    //   img: "https://i.ibb.co/F5xHGs4/Cave-Troll.jpg"
-    // },
-    // {
-    //   name: "Shadow Wraith",
-    //   level: 12,
-    //   health: 100,
-    //   img: "https://i.ibb.co/bJtZ58k/11.jpg"
-    // },
-    // {
-    //   name: "Bloodshade",
-    //   level: 15,
-    //   health: 120,
-    //   img: "https://i.ibb.co/k3tG09B/Bloodshade.jpg" 
-    // },
-    // {
-    //   name: "Shrek",
-    //   level: 14,
-    //   health: 120,
-    //   img: "https://i.ibb.co/16RD2Z9/14.jpg"
-    // },
-    // {
-    //   name: "Stay Puft Marshmallow Man",
-    //   level: 18,
-    //   health: 200,
-    //   img: "https://i.ibb.co/ZVvM9Jr/15.jpg"
-    // },
-    // {
-    //   name: "Dragon",
-    //   level: 20,
-    //   health: 300,
-    //   img: "https://i.ibb.co/HDKhnN8/10.jpg"
-    // }
+    {
+      name: "Giant Bat",
+      level: 3,
+      health: 25,
+      img: "https://i.ibb.co/W2B173s/Giant-Bat.jpg"
+    },
+    {
+      name: "Worm",
+      level: 4,
+      health: 30,
+      img: "https://i.ibb.co/ZhVw7B8/Worm.jpg"
+    },
+    {
+      name: "Mutant Rooster",
+      level: 5,
+      health: 35,
+      img: "https://i.ibb.co/30BDNGs/Mutant-Rooster.jpg"
+    },
+    {
+      name: "Rabbit of Caerbannog",
+      level: 6,
+      health: 40,
+      img: "https://i.ibb.co/DbkpkJ2/13.jpg"
+    },
+    {
+      name: "Cave Spider",
+      level: 7,
+      health: 50,
+      img: "https://i.ibb.co/yg7VNwP/Cave-Spider.jpg"
+    },
+    {
+      name: "Cave Stalker",
+      level: 8,
+      health: 60,
+      img: "https://i.ibb.co/YWVMmgD/Cave-Stalker.jpg"
+    },
+    {
+      name: "Stone Golem",
+      level: 9,
+      health: 70,
+      img: "https://i.ibb.co/CHrYyfy/Stone-Golem.jpg"
+    },
+    {
+      name: "Cave Troll",
+      level: 10,
+      health: 80,
+      img: "https://i.ibb.co/F5xHGs4/Cave-Troll.jpg"
+    },
+    {
+      name: "Shadow Wraith",
+      level: 12,
+      health: 100,
+      img: "https://i.ibb.co/bJtZ58k/11.jpg"
+    },
+    {
+      name: "Bloodshade",
+      level: 15,
+      health: 120,
+      img: "https://i.ibb.co/k3tG09B/Bloodshade.jpg" 
+    },
+    {
+      name: "Shrek",
+      level: 14,
+      health: 120,
+      img: "https://i.ibb.co/16RD2Z9/14.jpg"
+    },
+    {
+      name: "Stay Puft Marshmallow Man",
+      level: 18,
+      health: 200,
+      img: "https://i.ibb.co/ZVvM9Jr/15.jpg"
+    },
+    {
+      name: "Dragon",
+      level: 20,
+      health: 300,
+      img: "https://i.ibb.co/HDKhnN8/10.jpg"
+    }
   ];
 
 const locations = [
@@ -213,8 +213,9 @@ function buyWeapon() {
       goldText.innerText = gold;
       let newWeapon = weapons[currentWeapon].name;
       text.innerText = "You now have a " + newWeapon + ".";
-      inventory.push(newWeapon);
+      inventory.push(" " + newWeapon);
       text.innerText += " In your inventory you have: " + inventory;
+      weapon.innerText = weapons[currentWeapon].name;
     } else {
       text.innerText = "You do not have enough gold to buy a weapon.";
     }
