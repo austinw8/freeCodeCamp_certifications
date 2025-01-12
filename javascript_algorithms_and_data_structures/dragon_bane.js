@@ -17,6 +17,7 @@ const monsterStats = document.querySelector("#monsterStats");
 const monsterName = document.querySelector("#monsterName");
 const monsterHealthText = document.querySelector("#monsterHealth");
 const imgElement = document.querySelector("#monsterImage");
+const locationImage = document.querySelector("#locationImage");
 
 const weapons = [
     { name: 'Paper Clip', power: 5 },
@@ -120,19 +121,22 @@ const locations = [
     name: "town square",
     "button text": ["Go to store", "Visit cave", "Fight dragon"],
     "button functions": [goStore, goCave, fightDragon],
-    text: "You are in the town square. You see a sign that says \"Store\"."
+    text: "You are in the town square. You see a sign that says \"Store\".",
+    img: "https://d1vzi28wh99zvq.cloudfront.net/images/20766/_product_images/447391/Marketplace_MARKETING.jpg"
   },
   {
     name: "store",
     "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
     "button functions": [buyHealth, buyWeapon, goTown],
-    text: "You enter the store."
+    text: "You enter the store.",
+    img: "https://www.dndspeak.com/wp-content/uploads/2021/04/Shop-1.jpg"
   },
   {
     name: "cave",
     "button text": ["Fight monster", "Find treasure chest", "Exit cave"],
     "button functions": [fightRandomMonster, openTreasureChest, goTown],
-    text: "You enter the cave. What would you like to do?"
+    text: "You enter the cave. What would you like to do?",
+    img: "https://t3.ftcdn.net/jpg/06/41/30/92/360_F_641309220_IfhzYNjdPVrVl4WIMSfxX2p0Yg4Jfnnn.jpg"
   },
   {
     name: "fight",
@@ -184,14 +188,17 @@ function update(location) {
 
 function goTown() {
   update(locations[0]);
+  locationImage.src = locations[0].img;
 }
 
 function goStore() {
   update(locations[1]);
+  locationImage.src = locations[1].img;
 }
 
 function goCave() {
   update(locations[2]);
+  locationImage.src = locations[2].img;
 }
 
 function buyHealth() {
