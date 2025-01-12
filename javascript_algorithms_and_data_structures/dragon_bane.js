@@ -35,84 +35,84 @@ const monsters = [
       health: 15,
       img: "https://i.ibb.co/kHMB3pC/Slime.jpg"
     },
-    {
-      name: "Giant Bat",
-      level: 3,
-      health: 25,
-      img: "https://i.ibb.co/W2B173s/Giant-Bat.jpg"
-    },
-    {
-      name: "Worm",
-      level: 4,
-      health: 30,
-      img: "https://i.ibb.co/ZhVw7B8/Worm.jpg"
-    },
-    {
-      name: "Mutant Rooster",
-      level: 5,
-      health: 35,
-      img: "https://i.ibb.co/30BDNGs/Mutant-Rooster.jpg"
-    },
-    {
-      name: "Rabbit of Caerbannog",
-      level: 6,
-      health: 40,
-      img: "https://i.ibb.co/DbkpkJ2/13.jpg"
-    },
-    {
-      name: "Cave Spider",
-      level: 7,
-      health: 50,
-      img: "https://i.ibb.co/yg7VNwP/Cave-Spider.jpg"
-    },
-    {
-      name: "Cave Stalker",
-      level: 8,
-      health: 60,
-      img: "https://i.ibb.co/YWVMmgD/Cave-Stalker.jpg"
-    },
-    {
-      name: "Stone Golem",
-      level: 9,
-      health: 70,
-      img: "https://i.ibb.co/CHrYyfy/Stone-Golem.jpg"
-    },
-    {
-      name: "Cave Troll",
-      level: 10,
-      health: 80,
-      img: "https://i.ibb.co/F5xHGs4/Cave-Troll.jpg"
-    },
-    {
-      name: "Shadow Wraith",
-      level: 12,
-      health: 100,
-      img: "https://i.ibb.co/bJtZ58k/11.jpg"
-    },
-    {
-      name: "Bloodshade",
-      level: 15,
-      health: 120,
-      img: "https://i.ibb.co/k3tG09B/Bloodshade.jpg" 
-    },
-    {
-      name: "Shrek",
-      level: 14,
-      health: 120,
-      img: "https://i.ibb.co/16RD2Z9/14.jpg"
-    },
-    {
-      name: "Stay Puft Marshmallow Man",
-      level: 18,
-      health: 200,
-      img: "https://i.ibb.co/ZVvM9Jr/15.jpg"
-    },
-    {
-      name: "Dragon",
-      level: 20,
-      health: 300,
-      img: "https://i.ibb.co/HDKhnN8/10.jpg"
-    }
+    // {
+    //   name: "Giant Bat",
+    //   level: 3,
+    //   health: 25,
+    //   img: "https://i.ibb.co/W2B173s/Giant-Bat.jpg"
+    // },
+    // {
+    //   name: "Worm",
+    //   level: 4,
+    //   health: 30,
+    //   img: "https://i.ibb.co/ZhVw7B8/Worm.jpg"
+    // },
+    // {
+    //   name: "Mutant Rooster",
+    //   level: 5,
+    //   health: 35,
+    //   img: "https://i.ibb.co/30BDNGs/Mutant-Rooster.jpg"
+    // },
+    // {
+    //   name: "Rabbit of Caerbannog",
+    //   level: 6,
+    //   health: 40,
+    //   img: "https://i.ibb.co/DbkpkJ2/13.jpg"
+    // },
+    // {
+    //   name: "Cave Spider",
+    //   level: 7,
+    //   health: 50,
+    //   img: "https://i.ibb.co/yg7VNwP/Cave-Spider.jpg"
+    // },
+    // {
+    //   name: "Cave Stalker",
+    //   level: 8,
+    //   health: 60,
+    //   img: "https://i.ibb.co/YWVMmgD/Cave-Stalker.jpg"
+    // },
+    // {
+    //   name: "Stone Golem",
+    //   level: 9,
+    //   health: 70,
+    //   img: "https://i.ibb.co/CHrYyfy/Stone-Golem.jpg"
+    // },
+    // {
+    //   name: "Cave Troll",
+    //   level: 10,
+    //   health: 80,
+    //   img: "https://i.ibb.co/F5xHGs4/Cave-Troll.jpg"
+    // },
+    // {
+    //   name: "Shadow Wraith",
+    //   level: 12,
+    //   health: 100,
+    //   img: "https://i.ibb.co/bJtZ58k/11.jpg"
+    // },
+    // {
+    //   name: "Bloodshade",
+    //   level: 15,
+    //   health: 120,
+    //   img: "https://i.ibb.co/k3tG09B/Bloodshade.jpg" 
+    // },
+    // {
+    //   name: "Shrek",
+    //   level: 14,
+    //   health: 120,
+    //   img: "https://i.ibb.co/16RD2Z9/14.jpg"
+    // },
+    // {
+    //   name: "Stay Puft Marshmallow Man",
+    //   level: 18,
+    //   health: 200,
+    //   img: "https://i.ibb.co/ZVvM9Jr/15.jpg"
+    // },
+    // {
+    //   name: "Dragon",
+    //   level: 20,
+    //   health: 300,
+    //   img: "https://i.ibb.co/HDKhnN8/10.jpg"
+    // }
   ];
 
 const locations = [
@@ -144,7 +144,7 @@ const locations = [
     name: "kill monster",
     "button text": ["Go to town square", "Go to town square", "Go to town square"],
     "button functions": [goTown, goTown, easterEgg],
-    text: "You've defeated the monster! You gain experience points and find gold."
+    text: "You've defeated the monster! You gain experience points and gold."
   },
   {
     name: "lose",
@@ -254,7 +254,7 @@ function fightMimic() {
     monsterHealth = 15;
     monsterName.innerText = "Mimic";
     monsterHealthText.innerText = monsterHealth;
-    monsterImage.src = "https://i.imgur.com/Kh94js6.png";
+    monsterImage.src = "https://i.ibb.co/zH2Gfsx/12.jpg";
 }
 
 function fightRandomMonster() {
@@ -292,20 +292,20 @@ function attack() {
   if (health <= 0) {
     lose();
   } else if (monsterHealth <= 0) {
-    if (fighting === 2) {
+    if (fighting === 13) {
       winGame();
     } else {
       defeatMonster();
     }
   }
-  if (Math.random() <= .1 && inventory.length !== 1) {
+  if (Math.random() <= .05 && inventory.length !== 1) {
     text.innerText += " Your " + inventory.pop() + " breaks.";
     currentWeapon--;
   }
 }
 
 function getMonsterAttackValue(level) {
-  const hit = (level * 5) - (Math.floor(Math.random() * xp));
+  const hit = (level * (Math.floor(Math.random() * 6)) - (Math.floor(Math.random() * xp)));
   console.log(hit);
   return hit > 0 ? hit : 0;
 }
@@ -319,18 +319,22 @@ function dodge() {
 }
 
 function defeatMonster() {
-  gold += Math.floor(monsters[fighting].level * 6.7);
-  xp += monsters[fighting].level;
+  const goldGained = Math.floor(monsters[fighting].level * 6.7);
+  const xpGained = monsters[fighting].level;
+  gold += goldGained;
+  xp += xpGained;
   goldText.innerText = gold;
   xpText.innerText = xp;
   update(locations[4]);
+  text.innerHTML += `<br><strong>XP:</strong> ${xpGained} &nbsp; <strong>Gold:</strong> ${goldGained}`;
+  // return {goldGained, xpGained};
 }
 
 function openTreasureChest() {
     const chance = Math.floor(Math.random() * 100) + 1;
 
-    if (chance <= 40) {
-        gold += 5;
+    if (chance <= 50) {
+        gold += 15;
         goldText.innerText = gold;
         text.innerHTML = "You find gold!";
     } else if (chance <80) {
